@@ -10,7 +10,6 @@ class CustomTextW700 extends StatelessWidget {
     this.fontWeight = FontWeight.w700,
     this.color = AppColors.black,
     this.textDecoration,
-    this.textDirection = TextDirection.rtl,
     this.textHeight,
   });
 
@@ -20,7 +19,6 @@ class CustomTextW700 extends StatelessWidget {
   final FontWeight? fontWeight;
   final Color color;
   final TextDecoration? textDecoration;
-  final TextDirection? textDirection;
 
   @override
   Widget build(BuildContext context) {
@@ -34,8 +32,7 @@ class CustomTextW700 extends StatelessWidget {
         height: textHeight,
         overflow: TextOverflow.ellipsis
       ),
-      textDirection: textDirection,
-      maxLines: 2,
+      maxLines: 1,
     );
   }
 }

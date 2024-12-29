@@ -11,7 +11,6 @@ class CustomTextW400 extends StatelessWidget {
     this.color = AppColors.black,
     this.textDecoration,
     this.textAlign,
-    this.textDirection = TextDirection.rtl,
     this.height,
   });
 
@@ -22,13 +21,11 @@ class CustomTextW400 extends StatelessWidget {
   final Color color;
   final TextDecoration? textDecoration;
   final TextAlign? textAlign;
-  final TextDirection? textDirection;
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      textDirection: textDirection,
       textAlign: textAlign,
       style: TextStyle(
         height: height,
@@ -38,7 +35,7 @@ class CustomTextW400 extends StatelessWidget {
         decoration: textDecoration,
         overflow: TextOverflow.ellipsis
       ),
-      maxLines: 2,
+      maxLines: 1,
     );
   }
 }
